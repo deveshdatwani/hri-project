@@ -18,8 +18,8 @@
 
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 
-  <node name="ps4_joystick" pkg="joy" type="joy_node"></node>
-  <node name="ps_controller" pkg="ps_control" type="controller.py"></node>
-  <node name="time_tracker" pkg="hri" type="timetrack.py" output="screen"></node> 
+  <node name="gesture_controller" pkg="gesture_control" type="gesture.py"></node>
+  <node name="time_tracker" pkg="hri" type="timetrackgesture.py" output="screen"></node>
+
 
 </launch>
